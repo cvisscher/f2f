@@ -11,7 +11,13 @@ or read up on just the basics of [front matter](https://jekyllrb.com/docs/frontm
 and [creating pages](https://jekyllrb.com/docs/pages/).
 
 - **GitLab**: Simply fork this repository and start editing the `_config.yml` file!  
-- **GitHub**: Fork this repository and create a branch named `gh-pages`, then start editing the `_config.yml` file.
+- **GitHub**:
+1. Fork this repository.
+2. Set up a Personal Access Token ([instructions](https://jekyllrb.com/docs/continuous-integration/github-actions/#providing-permissions)) named `JEKYLL_PAT`.
+3. The GitHub Actions workflow should have run when you forked the repo. This initial run will fail because of the missing `JEKYLL_PAT` secret not being set. Got to the workflow run and click "re-run all workflows". This time it should succeed.
+4. Start editing the `_config.yml` file!
+
+> NOTE: GitHub Actions is required to deploy to GitHub Pages because GitHub [refuses to update their version of Jekyll](https://github.com/github/pages-gem/issues/651).
 
 # Added Features
 
@@ -19,14 +25,6 @@ and [creating pages](https://jekyllrb.com/docs/pages/).
 * Use `_config.yml` to **set whether the homepage tiles should pull pages or posts**, as well as how many to display.
 * Add your **social profiles** easily in `_config.yml`. Only social profiles buttons you enter in `config.yml` show up on the site footer!
 * Set **featured images** in front matter.
-
-# Issues
-
-If you would like to report a bug, ask a question, request a feature, feel free to do so on [the GitLab repository](https://gitlab.com/andrewbanchich/forty-jekyll-theme) and I will be more than happy to help!
-
-Alternatively, you can open an issue via email by emailing [incoming+andrewbanchich/forty-jekyll-theme@incoming.gitlab.com](mailto:incoming+andrewbanchich/forty-jekyll-theme@incoming.gitlab.com).
-
-The GitHub repository is simply a mirror of the GitLab repository.
 
 # Credits
 
